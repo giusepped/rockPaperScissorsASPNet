@@ -1,25 +1,25 @@
 ﻿using System;
 
-namespace rockpaperscissorsconsole
+namespace RockPaperScissorsWeb
 {
 	public class Game
 	{
-		public string PlayTurn(string Player1, string Player2)
+		public string PlayTurn(string Player, string Computer)
 		{
-			if (Player1 == Player2) {
-				return "It's a tie";
+			if (Player == Computer) {
+				return "It's a tie!";
 			}
-			else if (Player1 == "rock" && Player2 == "scissors") {
-				return "Player 1 wins";
+			else if (Player == "Rock" && Computer == "Scissors") {
+				return "You win!";
 			}
-			else if (Player1 == "paper" && Player2 == "rock") {
-				return "Player 1 wins";
+			else if (Player == "Paper" && Computer == "Rock") {
+				return "You win!";
 			}
-			else if (Player1 == "scissors" && Player2 == "paper") {
-				return "Player 1 wins";
+			else if (Player == "Scissors" && Computer == "Paper") {
+				return "You win!";
 			}
 			else {
-				return "Player 2 wins";
+				return "Computer wins! You lose!";
 			}
 		}
 	}
